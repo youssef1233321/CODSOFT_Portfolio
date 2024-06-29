@@ -1,0 +1,334 @@
+/* Global Rules */
+:root {
+  --main-button-color: #ffda35 ;
+  --main-text-color: #ff9e18 ;
+  --main-background-color: #091126 ;
+  --secondary-background-color: #09142b ;
+  --third-level-background-color: #162d5e ;
+  --secondary-text-color: #fbf8f0 ;
+  --third-level-text-color: rgb(170, 166, 195);
+}
+
+
+html {
+  scroll-behavior: smooth;
+}
+
+
+*{
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Work Sans", sans-serif;
+  position: relative;
+  color: var(--secondary-text-color);
+}
+
+/* End Global Rules */
+/* Start Components */
+
+.special-heading {
+  color: #182938;
+  font-size: 100px;
+  text-align: center;
+  font-weight: 800;
+  letter-spacing: -6px;
+  margin: 0;
+}
+.special-heading + p {
+  margin : -30px 0 0;
+  font-size: 20px;
+  text-align: center;
+  color: var(--secondary-text-color);
+} 
+@media (max-width: 767px ) {
+  .special-heading {
+   font-size: 70px;
+  }
+  .special-heading + p {
+   margin: -22px 0 0;
+  }
+}
+
+/* End Components */
+
+/* Start Header */
+
+.header{
+  background-color: var(--main-background-color);
+  position: fixed !important;
+  z-index: 9999 !important;
+  right: 0;
+  left: 0;
+  top: 0;
+  padding: 15px 0;
+  .specialSpan{
+    color: var(--main-text-color);
+    font-weight: bolder;
+  }
+   .links {
+    color: var(--secondary-text-color);
+  }
+  button{
+    background-color: var(--secondary-text-color);
+  }
+  .navbar-nav .links{
+    margin: 0 20px;
+  }
+  .active{
+    color : var(--main-text-color) !important;
+  }
+}
+
+.links:hover{
+  color:var(--main-text-color)
+}
+
+@media (max-width: 991px) {
+  .navbar-nav .links{
+    margin: 10px 0 !important;
+    text-align: center;
+  }
+}
+
+/* End Header */
+/* Start Home */
+
+.home { 
+  background-color: var(--main-background-color);
+  padding-bottom: 100px;
+  .col {
+    margin-top: 100px;
+  }
+
+  .colOne{
+    color: var(--secondary-text-color);
+
+    p {
+      color: var(--main-text-color);
+      font-size: 20px;
+    }
+
+    h1{
+      font-size: 50px;
+      font-weight: bolder;
+    }
+
+    h3{
+      color: var(--third-level-text-color);
+    }
+    
+
+    button{
+      background-color: var(--main-button-color) !important;
+      color :#091126;
+      font-weight: bolder;
+      padding: 20px 0;
+      width: 50%;
+      margin-top: 20px;
+    }
+  }
+}
+
+@media (max-width: 600px){
+  .home .colOne h1{
+   font-size: 35px !important;
+   }
+}
+
+@media (max-width: 991px) {
+  .home .colOne{
+    text-align: center;
+  }
+  .home .colTwo {
+    width: 50% !important;
+   
+  }
+ 
+  .home .row {
+    height: 100%;
+  }
+  .home .container {
+    height: 100%;
+    
+  }
+
+}
+
+/* End Home */
+/* Start About */
+
+.about {
+  background-color: var(--secondary-background-color);
+  .introductionContainer{
+    margin-top: 20px;
+    width: 75%;
+  }
+  h5 {
+    color: var(--third-level-text-color);
+  }
+  .introductionContainer h3{
+    font-size: 50px;
+    font-weight: bolder;
+  }
+  .introductionContainer p{
+    color: var(--third-level-text-color);
+    font-size: 20px;
+    margin-top: 25px;
+  }
+  .mainCard + h2 + .mainSkills + button{
+    background-color: var(--main-button-color) !important;
+    font-weight: bolder;
+    width: 25% ;
+    margin-bottom: 50px;
+  }
+  .mainSkills {
+    width: 100%;
+    h3 {
+      background-color: var(--third-level-background-color);
+      width: 50%;
+      padding: 15px 20px;
+      margin: 30px auto;
+      text-align: center;
+      border-radius: 20px;
+      -webkit-border-radius: 20px;
+      -moz-border-radius: 20px;
+      -ms-border-radius: 20px;
+      -o-border-radius: 20px;
+       }
+    .skill {
+      display: flex;
+      justify-content: center;
+       
+    }
+    .skill img {
+      margin: auto;
+      width: 100px;
+      height: 70px;
+    }
+    .cssImage{
+      width: 70px !important;
+      margin: 0 15px !important;
+    }
+    .reactImage {
+      width: 130px !important;
+    }
+    .reactCircle{
+      padding: 30px 15px  30px !important;
+    }
+    .skill div{
+      background-color: var(--secondary-text-color);
+      padding: 30px;
+      margin: 30px 0;
+      transition-duration: 1s;
+      border-radius: 50%;
+      -webkit-border-radius: 50%;
+      -moz-border-radius: 50%;
+      -ms-border-radius: 50%;
+      -o-border-radius: 50%;
+      
+}
+  }
+  
+}
+
+@media (max-width: 991px) {
+  .mainCard{
+    width: 100% !important;
+  }
+  .mainCard + h2 + .mainSkills +  button{
+    
+    width: 50% !important;
+  }
+  .introductionContainer{
+    width: 100% !important;
+  }
+}
+
+/* End About */
+/* Start Projects */
+
+.projects{
+  background-color: var(--main-background-color);
+  padding-bottom: 50px;
+  h3 {
+    color: var(--third-level-text-color);
+    margin: 50px 0;
+  }
+  .projectCard{
+    background-color: var(--secondary-background-color);
+    padding: 20px;
+    margin: 0 0 20px;
+    transition-duration: 1s;
+    
+    .imageCard{
+      margin-bottom: 20px;
+    }
+    h4{
+      font-weight: bolder;
+      text-align: center;
+      color: var(--main-text-color);
+    }
+    a{
+      text-decoration: none ;
+      color: #091126;
+    }
+    .buttonCard{
+      background-color: var(--main-button-color) !important;
+      color: #091126 !important;
+      font-weight: bolder;
+    
+    }
+  }
+}
+
+.projectCard:hover {
+  transform: scale(1.05 , 1.05);
+  -webkit-transform: scale(1.05 , 1.05);
+  -moz-transform: scale(1.05 , 1.05);
+  -ms-transform: scale(1.05 , 1.05);
+  -o-transform: scale(1.05 , 1.05);
+}
+
+/* End Projects */
+/* Start Contact */
+
+.contact {
+  background-color: var(--secondary-background-color);
+  padding: 50px;
+  padding-bottom: 50px;
+  .formContact{
+    background-color: var(--main-background-color);
+    padding: 30px;
+    width: 50%;
+    margin: auto;
+    margin-top: 50px;
+    border-radius: 20px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
+    .form-group {
+      margin-bottom: 40px;
+    }
+    button{
+      background-color: var(--main-button-color);
+      border: none !important;
+      color: #091126;
+      font-weight: bolder;
+      width: 50%;
+    }
+  
+}
+  
+}
+@media (max-width: 991px) {
+  .formContact  {
+    width: 100% !important;
+  }
+}
+
+/* End Contact */
+
+
